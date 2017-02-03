@@ -1,0 +1,5 @@
+<div class="container">
+    <md-list class="button-row" *ngFor="let item of items  | async">
+        <md-list-item><button md-raised-button (click)='handleSelectedItem(item)'>{{item.name}}</button></md-list-item>
+    </md-list>
+</div>

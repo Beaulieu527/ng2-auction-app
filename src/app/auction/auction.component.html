@@ -1,0 +1,30 @@
+<div>
+  <h1>Auction Form</h1>
+</div>
+
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Product Name" [(ngModel)]='product.name'>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Category" [(ngModel)]='product.category'>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Starting Price" type="number" [(ngModel)]='product.startingBid'>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Auction Date" type="date" [(ngModel)]='product.auctionDate'>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="Start Time" type="time" [(ngModel)]='product.startTime'>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <input md-input placeholder="End Time" type="time" [(ngModel)]='product.endTime'>
+    </md-input-container>
+     <md-input-container class="example-full-width">
+      <textarea md-input placeholder="Description" [(ngModel)]='product.description'></textarea>
+    </md-input-container>
+    <label for="selectImg">Select Image: 
+    <input type="file" name="documents" (change)="onChangeImage($event)" [(ngModel)]="imageFile" #documents="ngModel">
+    </label>
+    <button md-button (click)="onSubmit(product)">Submit</button>
+  

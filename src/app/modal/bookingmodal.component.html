@@ -1,0 +1,19 @@
+<h1 md-dialog-title>Your Booking Timing</h1>
+<md-dialog-content>
+  <md-input-container class="example-full-width">
+    <input md-input [placeholder]="slotbookdetails.id" disabled>
+  </md-input-container>
+  <md-input-container class="example-full-width">
+    <input md-input placeholder="date" type="date" [(ngModel)]='slotbookdetails.bookDate'>
+  </md-input-container>
+  <md-input-container class="example-full-width">
+    <input md-input placeholder="start time" type="time" [(ngModel)]='slotbookdetails.startTime'>
+  </md-input-container>
+  <md-input-container class="example-full-width">
+    <input md-input placeholder="end time" type="time" [(ngModel)]='slotbookdetails.endTime'>
+  </md-input-container>
+</md-dialog-content>
+<md-dialog-actions>
+  <button (click)="confirmationYes(slotbookdetails)">Yes</button>
+  <button md-dialog-close>No</button>
+</md-dialog-actions>

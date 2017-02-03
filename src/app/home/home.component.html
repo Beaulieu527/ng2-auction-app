@@ -1,0 +1,34 @@
+<div class="example-container">
+<br>  
+  <div class="example-button-row">
+    <strong>Use</strong> 
+    <a md-button routerLink="/auction">Auctioneer</a>
+    <strong>to Auction something</strong>
+    <h3>Categories {{timeTesting}}</h3>
+    <md-list class="button-row" *ngFor="let item of productsByCategory">
+        <md-list-item><button md-raised-button (click)='handleSelectedItem(item.category)'>{{item.category}}</button></md-list-item>
+    </md-list>
+  </div>
+  <md-card class="example-card" *ngFor="let item of testArrItems">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Item: <strong>{{item.name}}</strong></md-card-title>
+    <md-card-subtitle>Starting Bid: <strong>{{item.startingBid}}</strong></md-card-subtitle>
+    <md-card-subtitle>Current Bid: <strong>{{item.currentBid}}</strong></md-card-subtitle>
+    <md-card-subtitle>Bidding Date: <strong>{{item.auctionDate}}</strong></md-card-subtitle>
+    <md-card-subtitle>Start Time: <strong>{{item.startTime}}</strong></md-card-subtitle>
+    <md-card-subtitle>End Time: <strong>{{item.endTime}}</strong></md-card-subtitle>
+  </md-card-header>
+  <div style="width:100%;height:95px;"></div>
+  <md-divider></md-divider>
+  <img md-card-image [src]="item.image">
+  <md-card-content>
+    <p>
+      {{item.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button [routerLink]="['/home/product/',item.$key]">View</button>
+  </md-card-actions>
+</md-card>
+</div>

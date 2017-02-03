@@ -1,0 +1,23 @@
+<h1>This is product detail</h1>
+  <md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Item: <strong>{{productById.name}}</strong></md-card-title>
+    <md-card-subtitle>Starting Bid: <strong>{{productById.startingBid}}</strong></md-card-subtitle>
+    <md-card-subtitle>Current Bid: <strong>{{productById.currentBid}}</strong></md-card-subtitle>
+    <md-card-subtitle>Bidding Date: <strong>{{productById.auctionDate}}</strong></md-card-subtitle>
+    <md-card-subtitle>Start Time: <strong>{{productById.startTime}}</strong></md-card-subtitle>
+    <md-card-subtitle>End Time: <strong>{{productById.endTime}}</strong></md-card-subtitle>
+  </md-card-header>
+  <div style="width:100%;height:95px;"></div>
+  <md-divider></md-divider>
+  <img md-card-image [src]="productById.image">
+  <md-card-content>
+    <p>
+      {{productById.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button [routerLink]="['/home/product/',productById.$key]">View</button>
+  </md-card-actions>
+</md-card>

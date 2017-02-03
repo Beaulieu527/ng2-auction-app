@@ -1,0 +1,28 @@
+<md-tab-group>
+    <md-tab label="Signin">
+        <input type='text' [(ngModel)]="credentials.email" placeholder='Email'>
+        <input type='password' [(ngModel)]="credentials.password" placeholder='Password'>
+        <button (click)='signinUser(credentials)'>Signin</button>
+    </md-tab>
+    <md-tab label="Signup">
+        <md-card class="example-card">
+            <md-card-header>
+                Signup
+            </md-card-header>
+            <md-card-content>
+                <md-input-container class="example-full-width">
+                    <input md-input placeholder="Name" value="" [(ngModel)]="signupuser.name">
+                </md-input-container>
+                <md-input-container class="example-full-width">
+                    <input md-input placeholder="Username" value="" [(ngModel)]="signupuser.username">
+                </md-input-container>
+                <input type='text' [(ngModel)]="signupuser.email" placeholder='Email'>
+                <input type='password' [(ngModel)]="signupuser.password" placeholder='Password'>
+
+            </md-card-content>
+            <md-card-actions>
+                <button md-button (click)='signupUser(signupuser)'>Signup</button>
+            </md-card-actions>
+        </md-card>
+    </md-tab>
+</md-tab-group>
